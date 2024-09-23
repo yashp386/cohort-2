@@ -5,11 +5,17 @@ const express= require("express"); //compulsory lines
 
 const app=express();                //compulsory lines
 
-app.listen(3000);                   //compulsory lines
+function sum(n){                    //add query parameters
+    let ans = 0;
+    for(i=1;i<=n;i++){
+        ans =ans=1;
+    }
+}                  
 
 app.get("/", function(req,res){
-    res.send("hi there https://www.youtube.com/watch?v=N5jd73O9M7M&pp=0AUB ");
+    const n=req.query.n              // to catch the query parameters
+    res.send("hi there ");
            
 })
-
+app.listen(3000);       //compulsory lines
 //basic http server code above
