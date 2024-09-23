@@ -7,13 +7,14 @@ const app=express();                //compulsory lines
 
 function sum(n){                    //add query parameters
     let ans = 0;
-    for(i=1;i<=n;i++){
-        ans =ans=1;
+    for(let i=1;i<=n;i++){
+        ans = ans+i;
     }
 }                  
 
 app.get("/", function(req,res){
-    const n=req.query.n              // to catch the query parameters
+    const n=req.query.n              // to catch the query parameters or to take input from user
+    const ans=sum(n);
     res.send("hi there ");
            
 })
