@@ -7,5 +7,4 @@ const myserver=http.createServer((req,res) => {
     res.end("hello from server");
     
 });
-
 myserver.listen(8000, () => console.log("server started"));
